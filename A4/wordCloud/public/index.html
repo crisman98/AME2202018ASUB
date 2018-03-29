@@ -213,13 +213,14 @@ function generateCloud(data)
       }
    }
 
+   
    var theWords = Object.keys(wordCount); // all words over 5 characters
 
    var output = "";
    for(var i = 0; i < theWords.length; i = i + 1){
-     // code here  --- us the wordCount object to generate a word cloud of words that occur more than once.
+    // font-size + (10(5(wordCount[theWords[i]]));// code here  --- use the wordCount object to generate a word cloud of words that occur more than once.
      if(wordCount[theWords[i]] >1){ //check if the word occurs more than once.
-       output = output + "<span> " + theWords[i] + "</span>";
+       output = output + "<span style='font-size:" + (10+(1.5*wordCount[theWords[i]])) +"'> " + theWords[i] + "</span>";
      }
    }
 
