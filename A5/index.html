@@ -96,6 +96,25 @@
     var ha = h * (360/12) + (m*.5);
     var ma = m * (360/60)
     var sa = s * (360/60);
+	if (h >= 6 && h <= 12) {
+			document.getElementById("clockWrapper").style.background = "white";
+		} else {
+			document.getElementById("clockWrapper").style.background = "black";
+			document.getElementById("clockWrapper").style.color = "white";
+			document.getElementById("min").style.background = "white";
+			document.getElementById("num1").style.background = "white";
+			document.getElementById("num2").style.background = "white";
+			document.getElementById("num3").style.background = "white";
+			document.getElementById("num4").style.background = "white";
+			document.getElementById("num5").style.background = "white";
+			document.getElementById("num6").style.background = "white";
+			document.getElementById("num7").style.background = "white";
+			document.getElementById("num8").style.background = "white";
+			document.getElementById("num9").style.background = "white";
+			document.getElementById("num10").style.background = "white";
+			document.getElementById("num11").style.background = "white";
+			document.getElementById("num12").style.background = "white";
+		}
       
     document.getElementById("sec").style.transform = 'translate(150px) rotate(' + sa + 'deg)'
     document.getElementById("min").style.transform = 'translate(150px,20px) rotate(' + ma + 'deg)'
@@ -130,7 +149,7 @@
 			document.getElementById("clockWrapper").style.background = "white";
 		} else {
 			document.getElementById("clockWrapper").style.background = "black";
-			//document.getElementById("clockWrapper").style.border-color = "white";
+			document.getElementById("clockWrapper").style.color = "white";
 			document.getElementById("min").style.background = "white";
 			document.getElementById("num1").style.background = "white";
 			document.getElementById("num2").style.background = "white";
