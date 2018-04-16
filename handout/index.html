@@ -67,7 +67,7 @@ function aTZSelected(n){
 }
 
   var dataStore = [];
-  var start = function(){
+  var start = function(n){
     if(dataStore.length == 0){
       document.getElementById("theList").innerHTML = "No stored timezones. Add some!"
       return;
@@ -75,7 +75,7 @@ function aTZSelected(n){
      
     var markup = "";
     for(var i = 0; i < dataStore.length; i++){
-        markup += "<button class='tzCard' onclick='aTZSelected(" + i + ")'>" + dataStore[i].name +  "<iframe class='clock' src='./embedclock.html#" + 'dataStore[n].offset' + "'> </iframe>" + "</button>";
+        markup += "<button class='tzCard' onclick='aTZSelected(" + i + ")'>" + dataStore[i].name +  "<iframe class='clock' src='./embedclock.html#"  + dataStore[i].offset + "'> </iframe>" + "</button>";
     }
     console.log(markup);
     document.getElementById("theList").innerHTML = markup;
