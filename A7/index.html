@@ -1,0 +1,224 @@
+<html>
+
+<head>
+<style>
+body
+  {
+    margin: 0px;
+  }
+#theListWraper
+  {
+    width: 250px;
+    float: left;
+    height: 100%;
+    background: darkgrey;
+	
+  }
+@keyframes bounce {
+  from,
+  20%,
+  53%,
+  80%,
+  to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    transform: translate3d(0, 0, 0);
+  }
+  40%,
+  43% {
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    transform: translate3d(0, -30px, 0);
+  }
+  70% {
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    transform: translate3d(0, -15px, 0);
+  }
+  90% {
+    transform: translate3d(0, -4px, 0);
+  }
+}
+.bounce {
+  animation-name: bounce;
+  transform-origin: center bottom;
+}
+@keyframes flash {
+  from,
+  50%,
+  to {
+    opacity: 1;
+  }
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
+.flash {
+  animation-name: flash;
+}
+@keyframes tada {
+  from {
+  
+    transform: scale3d(1, 1, 1);
+  }
+  10%,
+  20% {
+    
+    transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+  }
+  30%,
+  50%,
+  70%,
+  90% {
+    
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+  }
+  40%,
+  60%,
+  80% {
+    
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+  }
+  to {
+    
+    transform: scale3d(1, 1, 1);
+  }
+}
+.tada {
+  animation-name: tada;
+}
+@keyframes rubberBand {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  30% {
+    transform: scale3d(1.25, 0.75, 1);
+  }
+
+  40% {
+    transform: scale3d(0.75, 1.25, 1);
+  }
+
+  50% {
+    transform: scale3d(1.15, 0.85, 1);
+  }
+
+  65% {
+    transform: scale3d(0.95, 1.05, 1);
+  }
+
+  75% {
+    transform: scale3d(1.05, 0.95, 1);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.rubberBand {
+  animation-name: rubberBand;
+}
+
+@keyframes swing {
+  20% {
+    transform: rotate3d(0, 0, 1, 15deg);
+  }
+
+  40% {
+    transform: rotate3d(0, 0, 1, -10deg);
+  }
+
+  60% {
+    transform: rotate3d(0, 0, 1, 5deg);
+  }
+
+  80% {
+    transform: rotate3d(0, 0, 1, -5deg);
+  }
+
+  to {
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+}
+
+.swing {
+  transform-origin: top center;
+  animation-name: swing;
+}
+ .animateNow
+  {
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+  }
+  
+.color
+{
+	background: red;
+}
+.rect
+{
+	height: 500px;
+	width: 700px;
+	position: relative;
+	left: 250%;
+	bottom:200px;	
+}
+</style>
+<script>
+function doBounce(){
+  document.getElementById("testDiv").className = 'color rect';
+  setTimeout(function(){
+    document.getElementById("testDiv").className = 'color rect bounce animateNow';
+  }, 100);
+}
+function doFlash(){
+  document.getElementById("testDiv").className = 'color rect';
+  setTimeout(function(){
+    document.getElementById("testDiv").className = 'color rect flash animateNow';
+  }, 100);
+}
+function doTada(){
+  document.getElementById("testDiv").className = 'color rect';
+  setTimeout(function(){
+    document.getElementById("testDiv").className = 'color rect tada animateNow';
+  }, 100);
+}
+function dorubberBand(){
+  document.getElementById("testDiv").className = 'color rect';
+  setTimeout(function(){
+    document.getElementById("testDiv").className = 'color rect rubberBand animateNow';
+  }, 100);
+}
+function doswing(){
+  document.getElementById("testDiv").className = 'color rect';
+  setTimeout(function(){
+    document.getElementById("testDiv").className = 'color rect swing animateNow';
+  }, 100);
+}
+</script>
+</head>
+<body>
+  <div id='theListWraper'>
+    <h1 style="padding-left: 30px;"> Animate.css <h1>
+	
+		
+	<button onclick='doBounce()' 
+	style = "background-color:grey;border: none;color: black; padding: 15px 50px; text-align: center; text-decoration: none; font-size: 16px; margin: 4px 2px; display:block; border-style: solid; border-color: darkgrey;width: 250px; outline-color:yellow; "> 
+	Bounce </button>
+	
+	<button onclick='doFlash()'style = "background-color:grey;border none ;color: black; padding: 15px 50px; text-align: center; text-decoration: none; font-size: 16px; margin: 4px 2px; display:block; border-style: solid; border-color: darkgrey;width: 250px; outline-color:yellow;"> 
+	Flash</button>
+	<button onclick='doTada()'style = "background-color:grey;border: none;color: black; padding: 15px 50px; text-align: center; text-decoration: none; font-size: 16px; margin: 4px 2px; display:block; border-style: solid; border-color: darkgrey;width: 250px;outline-color:yellow; "> 
+	Tada </button>
+	<button onclick='dorubberBand()'style = "background-color:grey;border: none;color: black; padding: 15px 50px; text-align: center; text-decoration: none; font-size: 16px; margin: 4px 2px; display:block; border-style: solid; border-color: darkgrey;width: 250px;outline-color:yellow; "> 
+	rubberBand </button>
+	<button onclick='doswing()'style = "background-color:grey;border: none;color: black; padding: 15px 50px; text-align: center; text-decoration: none; font-size: 16px; margin: 4px 2px; display:block; border-style: solid; border-color: darkgrey;width: 250px; outline-color:yellow;"> 
+	swing</button>
+	
+	<div id="testDiv" class='red rect animateNow'> </div>
+     </div>
+	 
+  
+</body>
+
+</html>
