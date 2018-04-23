@@ -138,8 +138,8 @@ hr {
 }
 .btn-default {
 	text-transform: uppercase;
-	color: red;
-	background-color: #414a52;
+	color: white;
+	background-color: red;
 	border: 0;
 	padding: 14px 20px;
 	margin: 0;
@@ -177,7 +177,7 @@ hr {
 	margin-bottom: 20px;
 }
 .intro p {
-	color: rgba(255,255,255,0.8);
+	color: white;
 	font-size: 22px;
 	margin-bottom: 40px;
 	margin-top: 20px;
